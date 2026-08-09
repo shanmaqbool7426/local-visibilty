@@ -1,0 +1,1 @@
+- [OpenAPI numeric schemas](openapi-numeric-schemas.md) — use number rather than integer in contracts because this workspace's Zod generator targets Zod 3.

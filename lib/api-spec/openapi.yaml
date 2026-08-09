@@ -10,6 +10,28 @@ servers:
 tags:
   - name: health
     description: Health operations
+  - name: dashboard
+    description: Client dashboard overview
+  - name: listings
+    description: Business directory listings
+  - name: reviews
+    description: Unified review inbox
+  - name: rankings
+    description: Local keyword rankings
+  - name: competitors
+    description: Competitor comparison
+  - name: content
+    description: Content planning
+  - name: recommendations
+    description: AI recommendations
+  - name: tasks
+    description: Issues and tasks
+  - name: settings
+    description: Client business settings
+  - name: billing
+    description: Subscription details
+  - name: support
+    description: Client support
 paths:
   /healthz:
     get:
@@ -24,7 +46,275 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/HealthStatus"
+  /dashboard:
+    get:
+      operationId: getDashboard
+      tags: [dashboard]
+      summary: Get the client dashboard overview
+      responses:
+        "200":
+          description: Dashboard overview
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Dashboard"
+  /listings:
+    get:
+      operationId: getListings
+      tags: [listings]
+      summary: List monitored business listings
+      responses:
+        "200":
+          description: Listings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Listing"
+  /reviews:
+    get:
+      operationId: getReviews
+      tags: [reviews]
+      summary: List unified reviews
+      responses:
+        "200":
+          description: Reviews
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Review"
+  /reviews/{id}/response:
+    post:
+      operationId: respondToReview
+      tags: [reviews]
+      summary: Save a demo response to a review
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReviewResponseInput"
+      responses:
+        "200":
+          description: Updated review
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Review"
+  /rankings:
+    get:
+      operationId: getRankings
+      tags: [rankings]
+      summary: List tracked keyword rankings
+      responses:
+        "200":
+          description: Rankings
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Ranking"
+  /competitors:
+    get:
+      operationId: getCompetitors
+      tags: [competitors]
+      summary: List competitor comparisons
+      responses:
+        "200":
+          description: Competitors
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Competitor"
+  /content:
+    get:
+      operationId: getContentItems
+      tags: [content]
+      summary: List planned content
+      responses:
+        "200":
+          description: Content items
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/ContentItem"
+    post:
+      operationId: createContentItem
+      tags: [content]
+      summary: Create a content idea
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContentItemInput"
+      responses:
+        "201":
+          description: Created content item
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContentItem"
+  /recommendations:
+    get:
+      operationId: getRecommendations
+      tags: [recommendations]
+      summary: List local SEO recommendations
+      responses:
+        "200":
+          description: Recommendations
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Recommendation"
+  /recommendations/ask:
+    post:
+      operationId: askRecommendation
+      tags: [recommendations]
+      summary: Ask the demo local SEO assistant
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssistantQuestionInput"
+      responses:
+        "200":
+          description: Assistant response
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AssistantAnswer"
+  /tasks:
+    get:
+      operationId: getTasks
+      tags: [tasks]
+      summary: List client tasks
+      responses:
+        "200":
+          description: Tasks
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Task"
+    post:
+      operationId: createTask
+      tags: [tasks]
+      summary: Create a client task
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TaskInput"
+      responses:
+        "201":
+          description: Created task
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Task"
+  /tasks/{id}:
+    patch:
+      operationId: updateTask
+      tags: [tasks]
+      summary: Update a task status
+      parameters:
+        - $ref: "#/components/parameters/Id"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TaskUpdate"
+      responses:
+        "200":
+          description: Updated task
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Task"
+  /settings:
+    get:
+      operationId: getSettings
+      tags: [settings]
+      summary: Get business settings
+      responses:
+        "200":
+          description: Settings
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessSettings"
+    patch:
+      operationId: updateSettings
+      tags: [settings]
+      summary: Update business settings
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BusinessSettingsUpdate"
+      responses:
+        "200":
+          description: Updated settings
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BusinessSettings"
+  /billing:
+    get:
+      operationId: getBilling
+      tags: [billing]
+      summary: Get current client plan
+      responses:
+        "200":
+          description: Billing summary
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Billing"
+  /support:
+    post:
+      operationId: createSupportRequest
+      tags: [support]
+      summary: Send a support request
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SupportRequestInput"
+      responses:
+        "201":
+          description: Support request created
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SupportRequest"
 components:
+  parameters:
+    Id:
+      name: id
+      in: path
+      required: true
+      schema:
+        type: number
   schemas:
     HealthStatus:
       type: object
@@ -33,4 +323,218 @@ components:
           type: string
       required:
         - status
+    Business:
+      type: object
+      required: [name, category, location]
+      properties:
+        name: { type: string }
+        category: { type: string }
+        location: { type: string }
+    VisibilityPoint:
+      type: object
+      required: [month, score]
+      properties:
+        month: { type: string }
+        score: { type: number }
+    HealthMetric:
+      type: object
+      required: [label, value]
+      properties:
+        label: { type: string }
+        value: { type: number }
+    Dashboard:
+      type: object
+      required: [business, visibilityScore, visibilityChange, rating, reviewCount, listingHealthy, listingTotal, keywordsImproving, trend, profileHealth, recentReviews, recommendations, tasks]
+      properties:
+        business: { $ref: "#/components/schemas/Business" }
+        visibilityScore: { type: number }
+        visibilityChange: { type: number }
+        rating: { type: number }
+        reviewCount: { type: number }
+        listingHealthy: { type: number }
+        listingTotal: { type: number }
+        keywordsImproving: { type: number }
+        trend:
+          type: array
+          items: { $ref: "#/components/schemas/VisibilityPoint" }
+        profileHealth:
+          type: array
+          items: { $ref: "#/components/schemas/HealthMetric" }
+        recentReviews:
+          type: array
+          items: { $ref: "#/components/schemas/Review" }
+        recommendations:
+          type: array
+          items: { $ref: "#/components/schemas/Recommendation" }
+        tasks:
+          type: array
+          items: { $ref: "#/components/schemas/Task" }
+    Listing:
+      type: object
+      required: [id, directory, status, nameMatch, addressMatch, phoneMatch, websiteMatch, lastChecked]
+      properties:
+        id: { type: number }
+        directory: { type: string }
+        status: { type: string, enum: [healthy, attention, pending] }
+        nameMatch: { type: boolean }
+        addressMatch: { type: boolean }
+        phoneMatch: { type: boolean }
+        websiteMatch: { type: boolean }
+        issue: { type: ["string", "null"] }
+        lastChecked: { type: string }
+    Review:
+      type: object
+      required: [id, customer, rating, platform, date, text, responded]
+      properties:
+        id: { type: number }
+        customer: { type: string }
+        rating: { type: number }
+        platform: { type: string }
+        date: { type: string }
+        text: { type: string }
+        responded: { type: boolean }
+        avatar: { type: string }
+    ReviewResponseInput:
+      type: object
+      required: [response]
+      properties:
+        response: { type: string, minLength: 1 }
+    Ranking:
+      type: object
+      required: [id, keyword, current, previous, change, trend]
+      properties:
+        id: { type: number }
+        keyword: { type: string }
+        current: { type: number }
+        previous: { type: number }
+        change: { type: number }
+        trend: { type: array, items: { type: number } }
+    Competitor:
+      type: object
+      required: [id, name, reviews, rating, visibility, keywords, citations]
+      properties:
+        id: { type: number }
+        name: { type: string }
+        reviews: { type: number }
+        rating: { type: number }
+        visibility: { type: number }
+        keywords: { type: number }
+        citations: { type: number }
+    ContentItem:
+      type: object
+      required: [id, title, type, date, status]
+      properties:
+        id: { type: number }
+        title: { type: string }
+        type: { type: string }
+        date: { type: string }
+        status: { type: string, enum: [draft, scheduled, published] }
+    ContentItemInput:
+      type: object
+      required: [title, type]
+      properties:
+        title: { type: string, minLength: 1 }
+        type: { type: string }
+        date: { type: string }
+    Recommendation:
+      type: object
+      required: [id, priority, title, description, action, impact]
+      properties:
+        id: { type: number }
+        priority: { type: string, enum: [high, medium, low] }
+        title: { type: string }
+        description: { type: string }
+        action: { type: string }
+        impact: { type: string }
+    AssistantQuestionInput:
+      type: object
+      required: [question]
+      properties:
+        question: { type: string, minLength: 1 }
+    AssistantAnswer:
+      type: object
+      required: [question, answer]
+      properties:
+        question: { type: string }
+        answer: { type: string }
+    Task:
+      type: object
+      required: [id, title, priority, dueDate, status]
+      properties:
+        id: { type: number }
+        title: { type: string }
+        priority: { type: string, enum: [high, medium, low] }
+        dueDate: { type: string }
+        status: { type: string, enum: [todo, in_progress, completed] }
+    TaskInput:
+      type: object
+      required: [title, priority, dueDate]
+      properties:
+        title: { type: string, minLength: 1 }
+        priority: { type: string, enum: [high, medium, low] }
+        dueDate: { type: string }
+    TaskUpdate:
+      type: object
+      properties:
+        status: { type: string, enum: [todo, in_progress, completed] }
+    BusinessSettings:
+      type: object
+      required: [businessName, phone, website, address, category, services, notifications]
+      properties:
+        businessName: { type: string }
+        phone: { type: string }
+        website: { type: string }
+        address: { type: string }
+        category: { type: string }
+        services: { type: string }
+        notifications:
+          type: object
+          required: [newReview, rankingChanges, citationIssues, monthlyReport, competitorAlerts]
+          properties:
+            newReview: { type: boolean }
+            rankingChanges: { type: boolean }
+            citationIssues: { type: boolean }
+            monthlyReport: { type: boolean }
+            competitorAlerts: { type: boolean }
+    BusinessSettingsUpdate:
+      type: object
+      properties:
+        businessName: { type: string }
+        phone: { type: string }
+        website: { type: string }
+        address: { type: string }
+        category: { type: string }
+        services: { type: string }
+        notifications:
+          type: object
+          properties:
+            newReview: { type: boolean }
+            rankingChanges: { type: boolean }
+            citationIssues: { type: boolean }
+            monthlyReport: { type: boolean }
+            competitorAlerts: { type: boolean }
+    Billing:
+      type: object
+      required: [plan, price, currency, status, nextBilling, included]
+      properties:
+        plan: { type: string }
+        price: { type: number }
+        currency: { type: string }
+        status: { type: string }
+        nextBilling: { type: string }
+        included: { type: array, items: { type: string } }
+    SupportRequestInput:
+      type: object
+      required: [subject, message]
+      properties:
+        subject: { type: string, minLength: 1 }
+        message: { type: string, minLength: 1 }
+    SupportRequest:
+      type: object
+      required: [id, subject, message, status]
+      properties:
+        id: { type: number }
+        subject: { type: string }
+        message: { type: string }
+        status: { type: string }
 
