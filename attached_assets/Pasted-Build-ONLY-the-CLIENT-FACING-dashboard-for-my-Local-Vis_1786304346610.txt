@@ -1,0 +1,1086 @@
+Build ONLY the CLIENT-FACING dashboard for my Local Visibility Management SaaS.
+
+Do NOT build:
+- Admin dashboard
+- Staff dashboard
+- Backend
+- Database
+- Real API integrations
+- Payment system
+- Authentication logic
+- Real Yelp/Google integrations
+
+For now, create a polished frontend prototype using realistic DEMO DATA.
+
+The purpose is to show a local business client what they are getting for their monthly subscription.
+
+==================================================
+PRODUCT
+==================================================
+
+Product name:
+
+Local Visibility Pro
+
+Tagline:
+
+"Manage your local online visibility from one place."
+
+Target client:
+
+Local businesses such as:
+- Lawyers
+- Paralegals
+- Dentists
+- Plumbers
+- HVAC
+- Roofers
+- Med spas
+- Auto repair
+- Cleaning companies
+
+Use this demo business:
+
+Bridge Legal Services
+
+Category:
+Traffic Ticket Defence / Paralegal
+
+Location:
+Toronto, Ontario, Canada
+
+Clearly label demo data internally, but the UI should look like a real production SaaS dashboard.
+
+==================================================
+DESIGN
+==================================================
+
+Create a premium modern B2B SaaS dashboard.
+
+Style:
+- Clean
+- Professional
+- Trustworthy
+- Minimal
+- Premium
+- Modern
+- Lots of whitespace
+- Subtle borders
+- Rounded cards
+- Soft shadows
+- Professional charts
+- Responsive
+- Desktop-first
+
+Avoid:
+- Cheap gradients
+- Excessive animations
+- Overly colorful UI
+- Clutter
+- Generic template appearance
+
+Use a professional dark navy/charcoal + white interface with restrained accent colors.
+
+==================================================
+APP LAYOUT
+==================================================
+
+LEFT SIDEBAR:
+
+Logo:
+Local Visibility Pro
+
+Navigation:
+
+Overview
+Listings
+Reviews
+Google Profile
+Rankings
+Competitors
+Content
+AI Recommendations
+Issues & Tasks
+Reports
+
+Bottom:
+
+Settings
+Billing
+Help & Support
+
+At the top:
+
+Business selector:
+
+Bridge Legal Services
+Toronto, Ontario
+
+User avatar:
+Ahmad
+
+==================================================
+1. OVERVIEW DASHBOARD
+==================================================
+
+Create a beautiful dashboard.
+
+Header:
+
+Good morning, Ahmad
+
+Bridge Legal Services
+Toronto, Ontario
+
+"Here's how your local visibility is performing."
+
+Date range:
+This Month
+
+==================================================
+
+TOP KPI CARDS
+==================================================
+
+Card 1:
+
+LOCAL VISIBILITY
+
+87/100
+
++6.4%
+
+vs last month
+
+Card 2:
+
+GOOGLE RATING
+
+4.9 ⭐
+
+76 Reviews
+
++7 this month
+
+Card 3:
+
+LISTINGS
+
+46/50
+
+92% Healthy
+
+Card 4:
+
+KEYWORDS
+
+12
+
+Improving
+
+==================================================
+VISIBILITY SCORE
+==================================================
+
+Create large chart/card.
+
+Title:
+
+Local Visibility Score
+
+87 / 100
+
+Show a line graph for the last 6 months.
+
+Example data:
+
+March: 71
+April: 74
+May: 78
+June: 81
+July: 84
+August: 87
+
+Show:
+
++16 points in 6 months
+
+==================================================
+PROFILE HEALTH
+==================================================
+
+Create horizontal progress cards:
+
+Google Business Profile       92%
+Citations                     92%
+Reviews                       95%
+Keyword Visibility            78%
+Competitor Position           81%
+
+Button:
+
+View Full Audit
+
+==================================================
+LISTING HEALTH
+==================================================
+
+Create cards for:
+
+Google
+Yelp
+YellowPages
+Apple Maps
+Bing
+Facebook
+411.ca
+Foursquare
+BBB
+
+Each should have status:
+
+Active
+Needs Attention
+Pending
+
+Example:
+
+Google
+Connected
+Healthy
+
+Yelp
+Active
+Healthy
+
+YellowPages
+Active
+Healthy
+
+Apple Maps
+Active
+Healthy
+
+Bing
+Active
+Healthy
+
+BBB
+Needs Attention
+
+Show:
+
+46 / 50 Listings Healthy
+
+Button:
+
+View All Listings
+
+==================================================
+REVIEWS
+==================================================
+
+Create review overview.
+
+Title:
+
+Your Reputation
+
+4.9 ⭐
+
+76 Google Reviews
+
+This Month:
+
++7 reviews
+
+Create bar/line chart showing review growth.
+
+Show recent reviews:
+
+★★★★★
+"Excellent service and very professional."
+Google
+2 days ago
+
+★★★★★
+"They handled my traffic ticket quickly..."
+Google
+5 days ago
+
+★★★★★
+"Very helpful and responsive."
+Yelp
+8 days ago
+
+Button:
+
+View All Reviews
+
+==================================================
+RANKINGS
+==================================================
+
+Create keyword table.
+
+Title:
+
+Keyword Performance
+
+Keyword | Current | Previous | Change
+
+Traffic Ticket Toronto
+#5
+#8
+↑ 3
+
+Traffic Ticket Etobicoke
+#3
+#5
+↑ 2
+
+Speeding Ticket Toronto
+#8
+#10
+↑ 2
+
+Careless Driving Toronto
+#11
+#9
+↓ 2
+
+Stunt Driving Toronto
+#14
+#18
+↑ 4
+
+Button:
+
+View All Keywords
+
+==================================================
+COMPETITOR SNAPSHOT
+==================================================
+
+Title:
+
+Competitor Overview
+
+Create comparison:
+
+Business
+Reviews
+Rating
+Visibility
+
+Bridge Legal
+76
+4.9
+87
+
+Competitor A
+102
+4.8
+91
+
+Competitor B
+89
+4.7
+89
+
+Show message:
+
+"Your competitors are ahead in review volume, but your rating remains stronger."
+
+Button:
+
+View Competitor Analysis
+
+==================================================
+AI RECOMMENDATIONS
+==================================================
+
+Create a premium card.
+
+Title:
+
+AI Local SEO Recommendations
+
+Subtitle:
+
+"Your biggest opportunities this month."
+
+Recommendation 1:
+
+HIGH PRIORITY
+
+Increase review volume
+
+Competitor A has 26 more reviews than you.
+
+Recommended action:
+Launch a review request campaign for recent customers.
+
+Button:
+Start Campaign
+
+Recommendation 2:
+
+MEDIUM PRIORITY
+
+Citation Opportunity
+
+You are missing 4 directories where your competitors are listed.
+
+Button:
+View Opportunities
+
+Recommendation 3:
+
+MEDIUM PRIORITY
+
+Keyword Opportunity
+
+"Stunt Driving Toronto" improved to #14.
+
+Optimize the related service page to strengthen local relevance.
+
+Button:
+View Recommendation
+
+==================================================
+ISSUES & TASKS
+==================================================
+
+Create task center.
+
+Title:
+
+Things That Need Your Attention
+
+Task:
+
+Fix BBB listing
+Priority:
+High
+Status:
+Needs Attention
+
+Task:
+
+Update YellowPages information
+Priority:
+Medium
+
+Task:
+
+Approve 3 review responses
+Priority:
+Medium
+
+Task:
+
+Add 4 missing citations
+Priority:
+Low
+
+Show:
+
+3 tasks requiring attention
+
+Button:
+
+View All Tasks
+
+==================================================
+2. LISTINGS PAGE
+==================================================
+
+Create full citation management page.
+
+Header:
+
+Business Listings
+
+Subtitle:
+
+"Monitor your business information across major platforms."
+
+Top:
+
+46 / 50 Healthy
+
+Filters:
+
+All
+Healthy
+Needs Attention
+Pending
+
+Table:
+
+Directory
+Status
+Name
+Address
+Phone
+Website
+Last Checked
+
+Google
+Healthy
+Match
+Match
+Match
+Match
+
+Yelp
+Healthy
+Match
+Match
+Match
+Match
+
+YellowPages
+Healthy
+
+Apple Maps
+Healthy
+
+Bing
+Healthy
+
+BBB
+Needs Attention
+
+Use green check icons for matching data.
+
+If something is wrong:
+
+"Address mismatch"
+
+Button:
+
+View Details
+
+==================================================
+3. REVIEWS PAGE
+==================================================
+
+Create unified review inbox.
+
+Top:
+
+Total Reviews:
+136
+
+Average Rating:
+4.8
+
+This Month:
++7
+
+Sources:
+
+Google
+Yelp
+Facebook
+
+Filters:
+
+All
+5 Star
+4 Star
+3 Star
+2 Star
+1 Star
+Needs Response
+
+Review cards:
+
+Avatar
+Customer name
+Rating
+Platform
+Date
+Review text
+
+Actions:
+
+Generate AI Response
+Mark Responded
+
+AI response modal:
+
+Suggested Response
+
+"Thank you for your kind words..."
+
+Buttons:
+
+Edit
+Approve
+Cancel
+
+IMPORTANT:
+
+This is a demo UI only.
+Do not implement real publishing.
+
+==================================================
+4. GOOGLE PROFILE PAGE
+==================================================
+
+Create Google Business Profile overview.
+
+Show:
+
+Connected ✓
+
+Business Name
+Bridge Legal Services
+
+Category
+Paralegal
+
+Location
+Toronto, Ontario
+
+Rating
+4.9
+
+Reviews
+76
+
+Profile Views
+586
+
+Calls
+82
+
+Website Clicks
+104
+
+Direction Requests
+67
+
+Profile Health:
+
+92%
+
+Sections:
+
+Business Information
+Reviews
+Posts
+Photos
+Performance
+
+Use demo data.
+
+==================================================
+5. RANKINGS PAGE
+==================================================
+
+Create professional ranking dashboard.
+
+Top:
+
+20 / 20 Keywords Tracked
+
+Average Position:
+8.6
+
+Improved:
+12
+
+Declined:
+3
+
+Stable:
+5
+
+Create ranking trend chart.
+
+Keyword table:
+
+Keyword
+Current Rank
+Previous Rank
+Change
+Trend
+
+Add filters:
+
+All
+Improving
+Declining
+Top 3
+Top 10
+Top 20
+
+==================================================
+6. COMPETITORS PAGE
+==================================================
+
+Create competitor comparison dashboard.
+
+Add competitors:
+
+Competitor A
+Competitor B
+Competitor C
+
+Show:
+
+Reviews
+Rating
+Visibility
+Keyword Coverage
+Citation Coverage
+
+Create comparison charts.
+
+Add section:
+
+"Where Competitors Are Winning"
+
+Example:
+
+Competitor A has:
++26 reviews
++7 citations
++4 ranking keywords
+
+Button:
+
+View Gap Analysis
+
+==================================================
+7. CONTENT PAGE
+==================================================
+
+Create content planning interface.
+
+Sections:
+
+Google Posts
+FAQs
+Service Content
+Blog Ideas
+
+Create content calendar.
+
+Example:
+
+Aug 12
+Traffic Ticket Tips
+
+Aug 15
+What To Do After Getting A Speeding Ticket
+
+Aug 18
+Stunt Driving FAQ
+
+Each content item:
+
+Draft
+Scheduled
+Published
+
+Add:
+
+Generate with AI
+
+Button.
+
+For now this only opens a demo modal.
+
+==================================================
+8. AI RECOMMENDATIONS PAGE
+==================================================
+
+Create dedicated AI recommendations center.
+
+Header:
+
+AI Local SEO Assistant
+
+"Your AI-powered local visibility advisor."
+
+Show cards:
+
+Priority
+Issue
+Why it matters
+Recommended action
+Potential impact
+
+Include:
+
+Ask AI input box.
+
+Placeholder:
+
+"Ask why your rankings changed..."
+
+Example questions:
+
+Why did my visibility score change?
+
+What should I fix first?
+
+Which competitor is strongest?
+
+Where am I losing visibility?
+
+What should I do this month?
+
+Use demo responses.
+
+==================================================
+9. ISSUES & TASKS
+==================================================
+
+Create task management page.
+
+Tabs:
+
+All
+High Priority
+In Progress
+Completed
+
+Tasks:
+
+Fix BBB listing
+Update YellowPages
+Respond to reviews
+Add missing citation
+Optimize Stunt Driving page
+
+Each task:
+
+Priority
+Due date
+Status
+
+Use:
+
+To Do
+In Progress
+Completed
+
+==================================================
+10. REPORTS PAGE
+==================================================
+
+Create monthly report interface.
+
+Title:
+
+Monthly Performance Report
+
+August 2026
+
+Summary:
+
+Visibility:
+87/100
++6.4%
+
+Reviews:
++7
+
+Citations:
+46/50
+
+Keywords:
++4 average improvement
+
+Create sections:
+
+Executive Summary
+Visibility
+Google Profile
+Reviews
+Citations
+Keywords
+Competitors
+Recommendations
+
+Buttons:
+
+Download PDF
+Email Report
+
+For now buttons can be UI-only.
+
+==================================================
+11. BILLING PAGE
+==================================================
+
+Create client subscription page.
+
+Current Plan:
+
+LOCAL PRO
+
+$299 CAD / month
+
+Status:
+Active
+
+Next Billing:
+September 10, 2026
+
+Included:
+
+✓ 50+ Business Listings
+✓ Google Profile Monitoring
+✓ Review Monitoring
+✓ Review Outreach
+✓ 20 Keyword Tracking
+✓ Competitor Monitoring
+✓ AI Recommendations
+✓ Monthly Reports
+✓ Dashboard
+✓ Support
+
+Buttons:
+
+Manage Subscription
+Upgrade Plan
+Cancel Subscription
+
+UI only for now.
+
+==================================================
+12. SETTINGS PAGE
+==================================================
+
+Sections:
+
+Business Information
+Account
+Notifications
+Integrations
+Team
+
+Business information:
+
+Business Name
+Phone
+Website
+Address
+Category
+Services
+
+Notifications:
+
+New Review
+Ranking Changes
+Citation Issues
+Monthly Report
+Competitor Alerts
+
+==================================================
+13. HELP & SUPPORT
+==================================================
+
+Create support page.
+
+Show:
+
+Dedicated Support
+
+"You have a dedicated local visibility consultant."
+
+Options:
+
+Send Message
+Book a Call
+View Help Center
+
+==================================================
+14. RESPONSIVE DESIGN
+==================================================
+
+Desktop:
+
+Sidebar + main content.
+
+Tablet:
+
+Collapsible sidebar.
+
+Mobile:
+
+Bottom navigation or collapsible menu.
+
+All tables must become mobile-friendly cards.
+
+==================================================
+15. UX REQUIREMENTS
+==================================================
+
+Use loading skeletons.
+
+Use tooltips.
+
+Use confirmation modals.
+
+Use toast notifications.
+
+Use smooth but subtle animations.
+
+Use accessible buttons.
+
+Use keyboard-friendly interactions.
+
+Use proper empty states.
+
+Use realistic demo data.
+
+No broken links.
+
+No placeholder lorem ipsum.
+
+No fake external integrations.
+
+==================================================
+16. IMPORTANT
+==================================================
+
+This is a CLIENT dashboard only.
+
+Do NOT create:
+
+Admin dashboard
+Staff dashboard
+Backend
+Database
+API
+Real payment integration
+Real Google integration
+Real Yelp integration
+
+Only create the polished client-facing frontend prototype.
+
+The final result should feel like a premium $299/month SaaS product.
+
+The client should immediately understand:
+
+"What am I paying for?"
+
+"What is being managed?"
+
+"Is my business improving?"
+
+"What needs attention?"
+
+"What is my agency doing for me?"
+
+The dashboard should answer all five questions clearly.
+
+Build the complete frontend now.
